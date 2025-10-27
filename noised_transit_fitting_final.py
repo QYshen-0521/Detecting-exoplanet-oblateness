@@ -39,25 +39,17 @@ def get_unique_filepath(base_path):
         i += 1
 
 def plot_corner(samples, param_names):
-        # 明确只绘制这两个参数
         target_names = ['projected_f', 'projected_theta']
-        
-        # 找到这两个参数在完整列表中的索引
         indices = [i for i, name in enumerate(param_names) if name in target_names]
-        
-        # 定义希腊字母和下标的 LaTeX 标签
         labels = [r'$f_p$', r'$\theta_p$']
-        
-        # 绘制只包含 f_p 和 theta_p 的 2x2 corner plot
         fig = corner.corner(
             samples[:, indices], 
             labels=labels, 
             quantiles=[0.16, 0.5, 0.84], 
             show_titles=True,
-            title_fmt=".2g" # 增加数字精度，可选
+            title_fmt=".2g"
         )
         
-        # 注意：文件名需要 f1 和 theta 的实际值，这里假设它们是函数外部的变量
         corner_plot_path = get_unique_filepath(f'{target}/{target}_oblate_corner_f={f1}_obliq={theta}.png')
         fig.savefig(corner_plot_path, dpi=300, bbox_inches='tight')
         plt.close(fig)
