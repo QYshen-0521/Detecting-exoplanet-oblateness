@@ -16,6 +16,6 @@ Steps
 4.	Run Noise_cal_final.py → generates selected_targets_v02.csv
 5.	Run noised_transit_fitting_final.py to perform MCMC fitting and analyze the results.
 
-Target Ranking
 
-Files and scripts in the target_ranking folder contain the methods and calculations used for exoplanet target ranking, which identify the most promising candidates for oblateness detection.
+(Not necessary) Target Ranking:
+Find_best_target.py contain the methods and calculations used for exoplanet target ranking, which identify the most promising candidates for oblateness detection.
