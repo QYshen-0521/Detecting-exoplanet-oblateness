@@ -9,10 +9,10 @@ The main scripts are designed to:
 	•	Perform MCMC fitting to recover the injected oblateness signals.
 
 Steps
-	1.	Download all files in the main directory.
-	2.	Run target_selection_final.py → generates selected_targets_v01.csv
-	3.	Run Noise_cal_final.py → generates selected_targets_v02.csv
-	4.	Run noised_transit_fitting_final.py to perform MCMC fitting and analyze the results.
+1.	Download all files in the main directory.	
+2.	Run target_selection_final.py → generates selected_targets_v01.csv
+3.	Run Noise_cal_final.py → generates selected_targets_v02.csv
+4.	Run noised_transit_fitting_final.py to perform MCMC fitting and analyze the results.
 
 Target Ranking
 
